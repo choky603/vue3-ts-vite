@@ -7,31 +7,20 @@
 
 ## Project Setup
 
-### Clone this repo:
-
 ```sh
+# Clone this repo:
 git clone https://github.com/choky603/vue3-ts-vite.git
-```
 
-```sh
+# install dependencies
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Compile and Hot-Reload for Development
 npm run dev
-```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
+# Type-Check, Compile and Minify for Production
 npm run build
-```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
+# Lint with [ESLint](https://eslint.org/)
 npm run lint
 ```
 
