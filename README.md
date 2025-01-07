@@ -2,8 +2,19 @@
 
 ## Concept
 
-- TypeScript 기반 Vue.js 3 + pinia
-- FDS(Feature-Driven Structure) 아키텍처 적용
+### TypeScript 기반 Vue.js 3 + pinia
+
+- TypeScript 기반 개발: 정적 타입 검사를 통해 코드의 안정성과 유지보수성을 향상시킵니다.
+- Vue.js 3 사용: 최신 Vue.js 버전을 활용하여 효율적인 컴포넌트 기반 개발을 지원합니다.
+- Pinia 상태 관리: 애플리케이션의 상태 관리를 위해 Pinia를 사용하여 중앙 집중식 상태 관리를 구현합니다.
+- Vite 빌드 도구: 빠른 개발 서버와 최적화된 빌드를 제공하는 Vite를 사용하여 개발 효율성을 높입니다.
+
+### FSD(Feature-Sliced Design) 아키텍처 적용
+
+- 균일성
+- 변경과 리팩토링에 대한 안정성
+- 로직 재사용을 통제
+- 비즈니스와 사용자 요구에 대한 지향성
 
 ## Project Setup
 
