@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <button @click="procLogin">로그인</button>
-    <button @click="procLogout">로그아웃</button>
-    <button @click="getProfile">조회</button>
-    <p>{{ arrData }}</p>
-  </div>
+  <v-btn color="primary" @click="procLogin">로그인</v-btn>
+  <v-btn color="secondary" @click="procLogout">로그아웃</v-btn>
+  <v-btn color="accent" @click="getProfile">조회</v-btn>
+  <v-card :text="arrData"></v-card>
 </template>
 
 <script setup lang="ts">
@@ -15,7 +13,7 @@ import { ref, onMounted } from 'vue'
 import { login, logout } from '@/app/api/authApi'
 import { getUserProfile } from '@/app/api/userApi'
 
-const arrData = ref<[]>([])
+const arrData = ref('')
 
 onMounted(() => {
   console.log(`the component is now mounted.`)
@@ -51,7 +49,7 @@ async function getProfile() {
     // #TODO 스토어 사용으로 변경
     const userProfile = await getUserProfile()
     console.log('사용자 프로필:', JSON.stringify(userProfile))
-    arrData.value = userProfile
+    arrData.value = JSON.stringify(userProfile)
   } catch (error) {
     console.log(`API 호출 중 에러 발생:${error}`)
     alert(`오류!!`)

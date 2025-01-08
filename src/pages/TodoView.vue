@@ -1,15 +1,9 @@
 <template>
   <div>
     <AddTodo />
-    <ul>
-      <TodoItem
-        v-for="todo in todos"
-        :key="todo.id"
-        :todo="todo"
-        @toggle="toggleTodo"
-        @delete="deleteTodo"
-      />
-    </ul>
+    <v-list-item v-for="todo in todos" :key="todo.id">
+      <TodoItem :todo="todo" @toggle="toggleTodo" @delete="deleteTodo" />
+    </v-list-item>
   </div>
 </template>
 

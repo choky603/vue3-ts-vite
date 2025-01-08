@@ -3,7 +3,7 @@
     <span :class="{ completed: todo.completed }" @click="sendToggle">
       {{ todo.title }}
     </span>
-    <button @click="sendDelete">Delete</button>
+    <v-btn color="primary" @click="sendDelete">삭제</v-btn>
   </li>
 </template>
 
