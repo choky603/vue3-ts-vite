@@ -1,4 +1,5 @@
 import axiosInstance from './axiosInstance'
+import router from '@/app/router'
 
 export const login = async (username: string, password: string) => {
   const response = await axiosInstance.post('/auth/login', { username, password })
@@ -15,6 +16,14 @@ export const login = async (username: string, password: string) => {
 }
 
 export const logout = async () => {
-  const response = await axiosInstance.post('/auth/logout')
-  return response.data
+  // const response = await axiosInstance.post('/auth/logout')
+  // return response.data
+
+  // TODO 임시
+  // 토큰 지워주고 초기화면
+  localStorage.removeItem('accessToken')
+  localStorage.removeItem('refreshToken')
+
+  router.push({ name: 'home' })
+  //location.href = '/'
 }
